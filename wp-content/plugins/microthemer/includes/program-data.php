@@ -513,6 +513,7 @@ $this->default_preferences = array(
 	"hover_inspect" => 0, // this is hard set in $this->getPreferences()
 	"allow_scss" => 0, // if enabled by default, invalid css/scss will prevent stylesheet update.
 	"server_scss" => 0, // give user option to compile scss on the server
+	"specificity_preference" => 1, // 1 = high, 0 = low
 	"grid_focus" => 'gridtemplate',
 	"monitor_js_errors" => 1,
 	"generated_css_focus" => 0,

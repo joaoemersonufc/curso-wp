@@ -40,6 +40,9 @@ $TvrLang = array(
 	'inline_animation_short' => esc_html__('Animation fails with display:inline', 'microthemer'),
 	'inline_animation_long' => esc_html__('Microthemer\'s animate.css animations do not always work well when elements have a display value of inline. To fix, go to the Behaviour property group and set the Display property to e.g. inline-block', 'microthemer'),
 
+	'notify_folder_limit_short' => esc_html__('Max selectors per folder reached (%s)', 'microthemer'),
+	'notify_folder_limit_long' => esc_html__('Your last selector was added to an auto-generated folder (%s) because your "%s" folder reached the limit of 40 selectors.', 'microthemer'),
+
 	'learn_more' => esc_html__('Learn more', 'microthemer'),
 	'slow_styles_tab' => esc_html__('Styles tab slows the browser: %1$s sec (avg)', 'microthemer'),
 	'drag_picker' => esc_html__('Drag to move color picker', 'microthemer'),

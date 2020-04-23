@@ -76,7 +76,7 @@ if ($this->edge_mode['available'] and !empty($this->preferences['edge_mode'])){
 }
 
 // dev tool - refresh option-icon css after updating icon-size-x in property options file
-$dev_tasks = true;
+$dev_tasks = false;
 if ($dev_tasks and TVR_DEV_MODE){
 
     // update the option icons - after adding new properties
@@ -653,7 +653,26 @@ if ($this->edge_mode['active']){
 						?>">
 
 							<div class="heading">
-								<span class="text"><?php esc_html_e('Targeting suggestions', 'microthemer'); ?></span>
+
+                                <span class="text"><?php esc_html_e('Targeting suggestions', 'microthemer'); ?></span>
+
+                                <?php
+                                $specificity_high = !empty($this->preferences['specificity_preference']) ? ' on' : '';
+                                ?>
+                                <div class="ui-toggle uit-par specificity-preference<?php echo $specificity_high; ?>" data-aspect="specificity_preference">
+                                    <span class="specificity-label"
+                                          title=" <?php esc_attr_e('Sort by specificity', 'microthemer'); ?>">
+                                        <?php esc_html_e('Specificity', 'microthemer'); ?>:
+                                    </span>
+                                    <span class="specificity-low ui-toggle"
+                                          title=" <?php esc_attr_e('favour classes', 'microthemer'); ?>">
+                                        <?php esc_html_e('low', 'microthemer'); ?>
+                                    </span>
+                                    <span class="specificity-high ui-toggle"
+                                          title=" <?php esc_attr_e('favour ids', 'microthemer'); ?>">
+                                        <?php esc_html_e('high', 'microthemer'); ?>
+                                    </span>
+                                </div>
 							</div>
 
 
