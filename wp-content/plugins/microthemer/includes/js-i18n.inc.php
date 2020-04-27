@@ -139,6 +139,7 @@ $TvrLang = array(
 	'load_script' => esc_html__('Loading Javascript', 'microthemer'),
 	'load_script_failed' => esc_html__('Script failed to load', 'microthemer'),
 	'load_script_failed_p' => esc_html__('The %s failed to load.', 'microthemer'),
+	'delete_folder_confirm' => esc_html__('Are you sure you want to delete your "%s" folder?', 'microthemer'),
 	'reset_settings_confirm' => esc_html__('Are you sure you want to reset all settings?', 'microthemer'),
 	'reset_empty_folders' => esc_html__('Resetting empty folders', 'microthemer'),
 	'clear_styles_confirm' => esc_html__('Are you sure you want to clear all styles?', 'microthemer'),

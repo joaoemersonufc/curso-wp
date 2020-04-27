@@ -98,10 +98,40 @@ Microthemer has built-in documentation! Just click the help icon (top right of t
 
 == Changelog ==
 
+
+= 6.1.4.9 (April 27th 2020) =
+
+# Bugs fixed
+* Clicking to the left of the new Specificity toggle label triggered the toggle.
+
+= 6.1.4.8 (April 26th 2020) =
+
+# Enhancement
+* Microthemer presents a confirm dialog when deleting a folder that contains one or more selectors.
+
+= 6.1.4.7 (April 25th 2020) =
+
+# Enhancement
+* Microthemer prioritises user-defined Oxygen classes when generating selector suggestions.
+* Microthemer auto clears grid-area shorthand when setting row/col start/end longhand properties using the input fields or the grid control area (and vice versa).
+
+# Change
+* Reduced number of recent/pages/posts in site navigation menu from 10 to 8. And reduced height of dropdown area.
+
+# Bugs fixes
+* Siteground compatibility issue: item.indexOf is not a function.
+* MT was ignoring custom classes set in Oxygen if an underscore was used (if Oxygen was active).
+* An issue with interchangeability between the code editor and grid item selectors.
+
+= 6.1.4.2 (April 23rd 2020) =
+
+# Bugs fixes
+* Siteground compatibility issue: item.indexOf is not a function.
+
 = 6.1.4.1 (April 22nd 2020) =
 
 # Enhancement
-* Microthemer's selector suggestions can be sorted by high or low specificity. This just changes the order of the suggesstions in the dropdown menus. It's useful for finding broader class-based selectors more easily.
+* Microthemer's selector suggestions can be sorted by high or low specificity. This just changes the order of the suggestions in the dropdown menus. It's useful for finding broader class-based selectors more easily.
 
 = 6.1.4.0 (April 21st 2020) =
 

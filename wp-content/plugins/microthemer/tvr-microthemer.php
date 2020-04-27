@@ -5,7 +5,7 @@ Plugin URI: https://themeover.com/microthemer
 Text Domain: microthemer
 Domain Path: /languages
 Description: Microthemer is a feature-rich visual design plugin for customizing the appearance of ANY WordPress Theme or Plugin Content (e.g. posts, pages, contact forms, headers, footers, sidebars) down to the smallest detail. For CSS coders, Microthemer is a proficiency tool that allows them to rapidly restyle a WordPress theme or plugin. For non-coders, Microthemer's intuitive point and click editing opens the door to advanced theme and plugin customization.
-Version: 6.1.4.1
+Version: 6.1.4.9
 Author: Themeover
 Author URI: https://themeover.com
 */
@@ -262,7 +262,7 @@ if ( is_admin() ) {
 		// define
 		class tvr_microthemer_admin {
 
-			var $version = '6.1.4.1';
+			var $version = '6.1.4.9';
 			var $db_chg_in_ver = '6.0.6.5';
 			var $locale = '';
 			var $time = 0;
@@ -797,6 +797,7 @@ if ( is_admin() ) {
 							$response_code  = esc_html($responseString);
 						}
 					}
+
 					$response['code'] = $response_code;
 
 					// if scheduled subscription check, log num tries and bail if deferring
@@ -2223,25 +2224,31 @@ $this->show_me = '<pre>$media_queries_list: '.print_r($media_queries_list, true)
 					
 
 					$this->propAliases = array(
-						'display-flex' => 'display',
-                        'display-grid' => 'display',
 
+					    'display-flex' => 'display',
+
+                        // properties that should go to grid prop in format cssf-grid
+                        'display-grid' => 'display',
                         'justify-items-grid' => 'justify-items',
                         'justify-content-grid' => 'justify-content',
-                        //'justify-self-grid' => 'justify-self', // use grid as default group for this
-
+						//'justify-self-grid' => 'justify-self', // use grid as default group for this
                         'align-items-grid' => 'align-items',
                         'align-content-grid' => 'align-content',
                         'align-self-grid' => 'align-self',
+						'order-grid' => 'order',
+						'z-index-grid' => 'z-index',
 
-						'width-gridall' => 'width',
+						// caution order an z-index appear twice here!
+                        // this has implications for resolve_repeated_property_group (OK for now)
+
+						// properties that should go to grid all fields
+                        'width-gridall' => 'width',
 						'height-gridall' => 'height',
 						'grid-area-gridall' => 'grid-area',
 						'order-gridall' => 'order',
 						'z-index-gridall' => 'z-index',
 
-                        'order-grid' => 'order',
-                        'z-index-grid' => 'z-index',
+
                     );
 
 					// var for storing then writing json data to JS file
@@ -4426,7 +4433,7 @@ $this->show_me = '<pre>$media_queries_list: '.print_r($media_queries_list, true)
 	                            ++$i;
                             }
 
-						    if ($i > 10) {
+						    if ($i >= 8) {
 						        break;
 						    }
 						}
@@ -7491,7 +7498,7 @@ $this->show_me = '<pre>$media_queries_list: '.print_r($media_queries_list, true)
 				$users_can_register = get_option('users_can_register');
 			    $common_config = array(
                     'post_status'=>'publish',
-                    'numberposts' => 10,
+                    'numberposts' => 8,
                     'suppress_filters' => false,
                     'orderby' => 'modified',
                     'order' => 'DESC',
@@ -11546,7 +11553,7 @@ if (!is_admin()) {
 			var $preferencesName = 'preferences_themer_loader';
 			// @var array $preferences Stores the ui options for this plugin
 			var $preferences = array();
-			var $version = '6.1.4.1';
+			var $version = '6.1.4.9';
 			var $microthemeruipage = 'tvr-microthemer.php';
 			var $file_stub = '';
 			var $min_stub = '';
